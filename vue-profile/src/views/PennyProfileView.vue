@@ -3,7 +3,15 @@
     export default {
         data() {
             return {
-            
+                Portfolio_titles: ["Title 1","Pixel Game","Title 3","Title 4","Title 5","Title 6"],
+                Portfolio_btns: [
+                    "https://www.google.com.tw/?hl=zh_TW",
+                    "https://pennypan0111.github.io/pixel-game/pixelGame-easy.html",
+                    "https://tw.yahoo.com/",
+                    "https://tw.yahoo.com/",
+                    "https://tw.yahoo.com/",
+                    "https://tw.yahoo.com/"
+                ],
             }
         },
         components:{
@@ -40,26 +48,33 @@
 
                 <el-timeline-item timestamp="2022/11 - 至今" placement="top">
                     <el-card>
-                        <h4>動力安全資訊股分有限公司｜工程師</h4>
+                        <h4>動力安全資訊股分有限公司｜前端工程師</h4>
                         <p>我還沒想內容</p>
                     </el-card>
                 </el-timeline-item>
 
-                <el-timeline-item timestamp="2018/11 - 2022/05" placement="top">
+                <el-timeline-item timestamp="2022/05 - 2022/10 (資歷5個月)" placement="top">
+                    <el-card>
+                        <h4>資展國際｜互動式網站UI/UX設計師就業養成班</h4>
+                        <p>我還沒想內容</p>
+                    </el-card>
+                </el-timeline-item>
+
+                <el-timeline-item timestamp="2018/11 - 2022/05 (資歷3年6個月)" placement="top">
                     <el-card>
                         <h4>富信大飯店股份有限公司｜設計專員</h4>
                         <p>在擔任設計專員期間，主要負責製作活動專案平面文宣(海報、DM...等)，印刷物輸出發包，以及針對季節新品進行商品拍攝。並曾於同期間兼任行銷職務，將以往所學相關行銷知識與設計技能結合應用。</p>
                     </el-card>
                 </el-timeline-item>
 
-                <el-timeline-item timestamp="2017/06 - 2018/10" placement="top">
+                <el-timeline-item timestamp="2017/06 - 2018/10 (資歷1年4個月)" placement="top">
                     <el-card>
                         <h4>金田餐飲股份有限公司｜行銷專員</h4>
                         <p>主要負責代理國外餐飲品牌管理，並擔任門市與進駐百貨之接洽窗口，從中學習到了專案時程的規劃，以及對外應變的溝通能力。</p>
                     </el-card>
                 </el-timeline-item>
 
-                <el-timeline-item timestamp="2016/07 - 2017/06" placement="top">
+                <el-timeline-item timestamp="2016/07 - 2017/06 (資歷11個月)" placement="top">
                     <el-card>
                         <h4>喜鴻旅行社｜行銷專員</h4>
                         <p>剛進職場的第一份工作，主要發想規劃官網網頁活動企劃，並與設計部門協同製作出活動網頁，同時負責社群軟體經營、廣告投放，以及內部專案新人教育訓練講師。</p>
@@ -81,30 +96,20 @@
         <div class="container">
             <SectionTitle class="title-primary" #sectionTitle>PORTFOLIO</SectionTitle>
             <el-row class="pb-5">
-                <div class="col-lg-4 col-6 pt-3"
-                v-for="(o, index) in 6"
-                :key="o"
-                :span="8"
-                >
+                <div class="col-lg-4 col-6 pt-3" v-for="(o, index) in 6" :key="o" :span="8">
                 <el-card :body-style="{ padding: '0px' }">
-                    <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image"/>
+                    <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image" />
                     <div style="padding: 14px">
-                    <span class="w-100 d-inline-block text-center title-primary font-weight-bold">Yummy hamburger</span>
-                    <div class="bottom text-center">
-                        <el-button text class="button lookup_btn mt-2">查看</el-button>
-                    </div>
+                        <span class="w-100 d-inline-block text-center title-primary font-weight-bold">{{ Portfolio_titles[index] }}</span>
+                        <div class="bottom text-center">
+                            <a :href="Portfolio_btns[index]" target="_blank" class="btn mt-2 lookup_btn">查看</a>
+                        </div>
                     </div>
                 </el-card>
                 </div>
             </el-row>
         </div>
     </section>
-
-
-
-
-
-
 
 </template>
 

@@ -17,6 +17,9 @@
 .title-secondary{
   color: var(--Secondary-Default);
 }
+.btn:focus{
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
 
 /* ---------- Profile ----------*/
 .Profile{
@@ -101,12 +104,13 @@
 .el-card__body img{
   width: 100%;
 }
-.el-button.is-text.lookup_btn{
+.lookup_btn{
   background: var(--Primary-Default);
   color: var(--white_p);
-  border-radius: 35px;
+  border-radius: 30px;
+  padding: 4px 30px;
 }
-.el-button.is-text.lookup_btn:not(.is-disabled):focus, .el-button.is-text.lookup_btn:not(.is-disabled):hover{
+.lookup_btn:not(.is-disabled):focus, .lookup_btn:not(.is-disabled):hover{
   background: var(--Primary-Default);
   color: var(--Secondary-Default);
 }
