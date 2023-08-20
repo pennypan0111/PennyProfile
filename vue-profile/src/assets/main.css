@@ -1,0 +1,112 @@
+/*通用規則*/
+:root {
+  --Primary-Default: #56757c;
+  --Secondary-Default: #fac470;
+  --white_p: #ffffff;
+  --gray_p: #a1a1a1;
+  --black_p: #353535;
+}
+
+/* ---------- 通用 ---------- */
+.el-header{
+  background: var(--Primary-Default);
+}
+.title-primary{
+  color: var(--Primary-Default);
+}
+.title-secondary{
+  color: var(--Secondary-Default);
+}
+
+/* ---------- Profile ----------*/
+.Profile{
+  height: calc( 100vh - 60px );
+}
+
+/* ---------- About Me ----------*/
+.AboutMe{
+  height: auto;
+  background: var(--Primary-Default);
+}
+.aboutMe-content{
+  color: var(--white_p);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 22px 0 48px;
+  text-align: justify;
+}
+@media screen and (min-width:768px){
+  .aboutMe-content{
+    color: var(--white_p);
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width:992px){
+  .AboutMe{
+    height: 100vh;
+  }
+  .aboutMe-content{
+    color: var(--white_p);
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+}
+
+/* ---------- Experience ----------*/
+.el-timeline{
+  padding-left: 0;
+}
+.el-timeline-item__node{
+  background-color: var(--Secondary-Default);
+  border-color: var(--Secondary-Default);
+}
+.el-timeline-item__tail{
+  border-left: 2px solid var(--Secondary-Default);
+}
+.el-timeline-item__timestamp{
+  font-size: 1rem;
+  color: var(--Secondary-Default);
+}
+.el-card__body h4{
+  font-weight: bold;
+  color: var(--Primary-Default);
+}
+.el-card__body p{
+  font-size: 1.2rem;
+  padding-top: 10px;
+  color: var(--black_p);
+}
+
+/* ---------- Skills ----------*/
+.Skills{
+  height: auto;
+  background: var(--Primary-Default);
+}
+@media screen and (min-width:768px){
+  .Skills{
+    height: auto;
+  }
+}
+@media screen and (min-width:992px){
+  .Skills{
+    height: 100vh;
+
+  }
+}
+
+/* ---------- Portfolio ----------*/
+.Portfolio{
+
+}
+.el-card__body img{
+  width: 100%;
+}
+.el-button.is-text.lookup_btn{
+  background: var(--Primary-Default);
+  color: var(--white_p);
+  border-radius: 35px;
+}
+.el-button.is-text.lookup_btn:not(.is-disabled):focus, .el-button.is-text.lookup_btn:not(.is-disabled):hover{
+  background: var(--Primary-Default);
+  color: var(--Secondary-Default);
+}

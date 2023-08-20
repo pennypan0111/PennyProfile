@@ -1,0 +1,26 @@
+{
+  "name": "vue-profile",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "axios": "^1.4.0",
+    "bootstrap": "^4.6.2",
+    "bootstrap-vue": "^2.23.1",
+    "element-plus": "^2.3.9",
+    "pinia": "^2.1.6",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "vue-sweetalert2": "^5.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.1",
+    "json-server": "^0.17.3",
+    "vite": "^4.4.9"
+  }
+}
