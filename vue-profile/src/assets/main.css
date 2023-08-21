@@ -21,6 +21,57 @@
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
+/* ---------- HeaderTop ---------- */
+.bg-light{
+  background: var(--Primary-Default) !important;
+  position: fixed;
+  width: 100%;
+  box-shadow:  0 2px 6px 0 rgba(70, 94, 100, 0.28), 0 2px 6px 0 rgba(70, 94, 100, 0.28);
+  z-index: 10;
+}
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active{
+  color: var(--white_p);
+}
+.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus{
+  color: var(--white_p);
+}
+.navbar-light .navbar-brand{
+  color: var(--white_p);
+}
+.navbar-light .navbar-nav .nav-link{
+  color: var(--white_p);
+  font-size: 1.2rem;
+}
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus{
+  color: var(--Secondary-Default);
+}
+.navbar-collapse{
+  border-top: 2px solid rgba(255, 255, 255, 0.24);
+}
+.navbar-light .navbar-toggler{
+  border: 0 solid transparent;
+  color: var(--white_p);
+  font-size: 1.4rem;
+}
+.navbar-blog {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  color: var(--white_p);
+}
+.navbar-blog:hover {
+  color: var(--Secondary-Default);
+}
+@media screen and (min-width:992px){
+  .navbar-collapse{
+    border-top: 0px solid transparent;
+  }
+}
+
 /* ---------- Profile ----------*/
 .Profile{
   height: calc( 100vh - 60px );
@@ -45,9 +96,9 @@
   }
 }
 @media screen and (min-width:992px){
-  .AboutMe{
+  /* .AboutMe{
     height: 100vh;
-  }
+  } */
   .aboutMe-content{
     color: var(--white_p);
     font-size: 1.2rem;
@@ -98,9 +149,6 @@
 }
 
 /* ---------- Portfolio ----------*/
-.Portfolio{
-
-}
 .el-card__body img{
   width: 100%;
 }

@@ -29,7 +29,7 @@
     <section class="AboutMe">
         <div class="container">
             <SectionTitle class="title-secondary" #sectionTitle>ABOUT ME</SectionTitle>
-            <div class="aboutMe-content pt-5">
+            <div class="aboutMe-content">
                 畢業於靜宜大學-企業管理學系，曾任職行銷企劃，後因自我興趣使然，轉職為全職設計，主要以製作平面文宣(DM、海報)、印刷品發包、協助商品拍攝以及後續商品修圖為主。同時順應潮流的趨勢，嘗試自學影片的剪輯及後製，也曾有幸接到Youtuber影片剪輯後製的經驗。
                 <br/>
                 <br/>

@@ -1,7 +1,7 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 import SectionTitle from './components/SectionTitle.vue'
-
+import HeaderTop from './components/HeaderTop.vue'
 
 export default {
   data() {
@@ -10,6 +10,7 @@ export default {
     }
   },
   components:{
+    HeaderTop,
     SectionTitle
   }
 };
@@ -20,7 +21,8 @@ export default {
 
   <body>
 
-    <el-header></el-header>
+    <!-- <el-header></el-header> -->
+    <HeaderTop></HeaderTop>
 
   </body>
 
