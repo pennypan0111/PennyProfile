@@ -8,6 +8,9 @@
 }
 
 /* ---------- 通用 ---------- */
+html{
+  scroll-behavior: smooth;
+}
 .el-header{
   background: var(--Primary-Default);
 }
