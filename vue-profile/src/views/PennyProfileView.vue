@@ -1,69 +1,97 @@
 <script>
     import SectionTitle from '../components/SectionTitle.vue'
-    import {carousel} from 'vue-owl-carousel'
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    import { Pagination, Navigation } from 'swiper/modules';
     export default {
         data() {
             return {
-                Portfolio_titles: ["Play One","Pixel Game","Title 3","Juice。果汁","Title 5","Title 6"],
+                Portfolio_Category:[
+                    "Static Page with RWD",
+                    "Static Page",
+                    "Static Page with RWD",
+                    "Figma Prototype",
+                    "Figma Prototype",
+                    "Figma Prototype",
+                ],
+                Portfolio_titles: [
+                    "Play One。陪玩",
+                    "Space Inyaders。太空侵略者",
+                    "To Do List。代辦清單",
+                    "Juice。果汁",
+                    "Lucky Roulette。幸運輪盤",
+                    "Title 6"
+                ],
                 Portfolio_btns: [
                     "https://pennypan0111.github.io/gm/",
                     "https://pennypan0111.github.io/pixel-game/pixelGame-easy.html",
-                    "https://tw.yahoo.com/",
+                    "https://pennypan0111.github.io/vueToDoList/",
                     "https://www.figma.com/proto/DcpAyPWL1LlkZq48xhsiNa/Juice%E3%80%82%E6%9E%9C%E6%B1%81?page-id=0%3A1&type=design&node-id=1-3&viewport=755%2C414%2C0.19&t=AYNmdkgKJ5fMskN6-1&scaling=scale-down&starting-point-node-id=1%3A3&mode=design",
                     "https://tw.yahoo.com/",
                     "https://tw.yahoo.com/"
                 ],
-                Portfolio_introduce:["介紹Switch遊戲","使用Javascript呈現經典射擊遊戲","","自行設計主題及風格樣式，並透過運用Figma prototype模擬品牌官網頁面實際運行畫面","",""],
+                Portfolio_introduce:[
+                    "大量運用CSS Animation動畫效果，為Switch遊戲的介紹頁面創造出生動的視覺效果，並有效地展示遊戲的特色和亮點",
+                    "設計以復古像素風格為主的UI界面，結合JavaScript編寫遊戲互動，打造經典射擊遊戲體驗",
+                    "利用Vue.js的Options API寫法，建立簡單的待辦事項清單，並可執行新增、刪除、更新等操作",
+                    "自行設計品牌主題及風格樣式，並透過運用Figma prototype模擬品牌官網頁面實際運行畫面",
+                    "",
+                    ""
+                ],
                 Portfolio_img:[
                     "../../public/img/PlayOne.jpg",
                     "../../public/img/pixelGame.jpg",
-                    "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png",
+                    "../../public/img/ToDoList.jpg",
                     "../../public/img/juice.jpg",
-                    "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png",
+                    "../../public/img/Lucky_Roulette.jpg",
                     "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png",
                 ],
-                items: ['項目1', '項目2', '項目3', '項目4', '項目5'],
                 currentIndex: 0,
                 translateX: 0,
                 itemsToShow: 0,
+                screenWidth: window.innerWidth,
+                modules: [Pagination, Navigation],
             }
         },
         mounted() {
-            window.addEventListener('resize', this.handleWindowResize);
+            window.addEventListener('resize', this.updateScreenWidth);
         },
         beforeDestroy() {
-            window.removeEventListener('resize', this.handleWindowResize);
+            window.removeEventListener('resize', this.updateScreenWidth);
         },
         methods:{
-            slideLeft() {
-                if (this.currentIndex > 0) {
-                    this.currentIndex--;
-                    const container = document.querySelector('.container'); // 替换 '.container' 为你的容器选择器
-                    const containerWidth = container.offsetWidth;
-                    const itemWidth = 200; // 假设每个项目的宽度是200px
-                    const visibleItems = Math.floor(containerWidth / itemWidth); // 计算可见项目数量
-                    this.itemsToShow = visibleItems; // 将可见项目数量存储在组件的数据中
-                    this.translateX = this.currentIndex * -itemWidth;
-                }
-            },
-            slideRight() {
-                if (this.currentIndex < this.items.length - this.itemsToShow) {
-                    this.currentIndex++;
-                    const container = document.querySelector('.container'); // 替换 '.container' 为你的容器选择器
-                    const containerWidth = container.offsetWidth;
-                    const itemWidth = 200; // 假设每个项目的宽度是200px
-                    const visibleItems = Math.floor(containerWidth / itemWidth); // 计算可见项目数量
-                    this.itemsToShow = visibleItems; // 将可见项目数量存储在组件的数据中
-                    this.translateX = this.currentIndex * -itemWidth;
-                }
-            },
+            // slideLeft() {
+            //     if (this.currentIndex > 0) {
+            //         this.currentIndex--;
+            //         const container = document.querySelector('.container'); // 替换 '.container' 为你的容器选择器
+            //         const containerWidth = container.offsetWidth;
+            //         const itemWidth = 200; // 假设每个项目的宽度是200px
+            //         const visibleItems = Math.floor(containerWidth / itemWidth); // 计算可见项目数量
+            //         this.itemsToShow = visibleItems; // 将可见项目数量存储在组件的数据中
+            //         this.translateX = this.currentIndex * -itemWidth;
+            //     }
+            // },
+            // slideRight() {
+            //     if (this.currentIndex < this.items.length - this.itemsToShow) {
+            //         this.currentIndex++;
+            //         const container = document.querySelector('.container'); // 替换 '.container' 为你的容器选择器
+            //         const containerWidth = container.offsetWidth;
+            //         const itemWidth = 200; // 假设每个项目的宽度是200px
+            //         const visibleItems = Math.floor(containerWidth / itemWidth); // 计算可见项目数量
+            //         this.itemsToShow = visibleItems; // 将可见项目数量存储在组件的数据中
+            //         this.translateX = this.currentIndex * -itemWidth;
+            //     }
+            // },
             handleWindowResize() {
                 this.translateX = 0; // 在窗口大小改变时将 translateX 归零
+            },
+            updateScreenWidth() {
+                this.screenWidth = window.innerWidth;
             },
         },
         components:{
             SectionTitle,
-            carousel,
+            Swiper,
+            SwiperSlide,
         }
     };
 </script>
@@ -75,7 +103,7 @@
     </section>
 
     <section class="AboutMe" id="About">
-        <div class="container">
+        <div class="container pb-5">
             <SectionTitle class="title-secondary" #sectionTitle>ABOUT ME</SectionTitle>
             <div class="aboutMe-content">
                 畢業於靜宜大學-企業管理學系，曾任職行銷企劃，後因自我興趣使然，轉職為全職設計，主要以製作平面文宣(DM、海報)、印刷品發包、協助商品拍攝以及後續商品修圖為主。同時順應潮流的趨勢，嘗試自學影片的剪輯及後製，也曾有幸接到Youtuber影片剪輯後製的經驗。
@@ -136,9 +164,14 @@
     <section class="Skills" id="Skills">
         <div class="container">
             <SectionTitle class="title-secondary" #sectionTitle>SKILLS</SectionTitle>
-            <div class="carousel-container pb-5 pt-5" ref="container">
-                <div class="carousel-train d-flex justify-content-around" :style="{ transform: `translateX(${translateX}px)` }" @resize="handleWindowResize">
-
+            <swiper
+                :slidesPerView="screenWidth >= 1200 ? 5 : (screenWidth >= 992 ? 4 : (screenWidth >= 768 ? 3 : 2))"
+                :spaceBetween="30"
+                :modules="modules"
+                :pagination="{clickable: true,}"
+                class="mySwiper pb-5"
+            >
+                <swiper-slide>
                     <div class="skill_Card px-4" >
                         <div class="skill_Title skill_fill">前端<br/>技術</div>
                         <div class="skill_Content mt-4 pt-4">
@@ -149,7 +182,9 @@
                             <p class="dolt pl-4">Vue.js</p>
                         </div>
                     </div>
+                </swiper-slide>
 
+                <swiper-slide>
                     <div class="skill_Card px-4">
                         <div class="skill_Title skill_line">設計<br/>軟體</div>
                         <div class="skill_Content mt-4 pt-4">
@@ -158,7 +193,9 @@
                             <p class="dolt pl-4">Figma</p>
                         </div>
                     </div>
+                </swiper-slide>
 
+                <swiper-slide>
                     <div class="skill_Card px-4">
                         <div class="skill_Title skill_fill">版本<br/>控制</div>
                         <div class="skill_Content mt-4 pt-4">
@@ -167,7 +204,9 @@
                             <p class="dolt pl-4">Azure DevOps</p>
                         </div>
                     </div>
+                </swiper-slide>
 
+                <swiper-slide>
                     <div class="skill_Card px-4">
                         <div class="skill_Title skill_line">辦公<br/>軟體</div>
                         <div class="skill_Content mt-4 pt-4">
@@ -176,22 +215,20 @@
                             <p class="dolt pl-4">Excel</p>
                         </div>
                     </div>
+                </swiper-slide>
 
+                <swiper-slide>
                     <div class="skill_Card px-4">
                         <div class="skill_Title skill_fill">剪輯<br/>軟體</div>
                         <div class="skill_Content mt-4 pt-4">
                             <p class="dolt pl-4">Premiere</p>
                         </div>
-                    </div>  
-                    
-                </div>
-                <button class="btn arrow-btn arrow-left" @click="slideLeft"><font-awesome-icon icon="fa-solid fa-angle-left" /></button>
-                <button class="btn arrow-btn arrow-right" @click="slideRight"><font-awesome-icon icon="fa-solid fa-angle-right" /></button>
-            </div>
-
+                    </div> 
+                </swiper-slide>
+                
+            </swiper>
         </div>
     </section>
-
 
     <section class="Portfolio" id="Portfolio">
         <div class="container">
@@ -201,6 +238,7 @@
                 <el-card :body-style="{ padding: '0px' }">
                     <img :src="Portfolio_img[index]" />
                     <div style="padding: 14px">
+                        <span class="text-center w-100 d-inline-block title-secondary">— {{ Portfolio_Category[index] }} —</span>
                         <p class="w-100 d-inline-block text-center title-primary font-weight-bold portfolio-card-title">{{ Portfolio_titles[index] }}</p>
                         <span class="w-100 d-inline-block text-justify">{{ Portfolio_introduce[index] }}</span>
                         <div class="bottom text-center">

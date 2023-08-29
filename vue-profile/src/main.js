@@ -12,6 +12,8 @@ import 'element-plus/dist/index.css'
 import 'sweetalert2/dist/sweetalert2.min.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'swiper/css';
+import 'swiper/css/pagination';
 import './assets/main.css'
 
 import App from './App.vue'

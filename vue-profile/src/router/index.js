@@ -5,6 +5,11 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/',
+      name: 'home',
+      component: () => import('../views/PennyProfileView.vue')
+    },
+    {
       path: '/PennyProfile',
       name: 'PennyProfile',
       // route level code-splitting

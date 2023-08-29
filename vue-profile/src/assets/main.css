@@ -93,7 +93,6 @@ html{
   color: var(--white_p);
   font-size: 1.2rem;
   line-height: 1.8;
-  padding: 22px 0 48px;
   text-align: justify;
 }
 @media screen and (min-width:768px){
@@ -134,7 +133,7 @@ html{
 }
 .el-card__body p{
   font-size: 1.2rem;
-  padding-top: 10px;
+  padding-bottom: 10px;
   color: var(--black_p);
 }
 
@@ -148,11 +147,11 @@ html{
   overflow: hidden;
   position: relative;
 }
-.carousel-train{
-  width: 1000px;
-  margin: auto;
-  transform: translateX(0px);
-  transition: 0.5s;
+.swiper-wrapper{
+  cursor: grab;
+}
+.swiper-pagination-bullet-active{
+  background: var(--white_p);
 }
 .arrow-btn{
   color: var(--white_p);
@@ -169,7 +168,7 @@ html{
   right: 0;
 }
 .skill_Card{
-  width: 100%;
+  width: 200px;
 }
 .skill_Title{
   width: 100%;
@@ -210,13 +209,17 @@ html{
   border-radius: 12px;
   transform: translate(-50%, -50%);
 }
-@media screen and (min-width:768px){
-
-
-}
 @media screen and (min-width:992px){
   .arrow-btn{
     display: none;
+  }
+}
+@media screen and (min-width:1200px){
+  .arrow-btn{
+    display: none;
+  }
+  .swiper-wrapper{
+    cursor: default;
   }
 }
 
@@ -224,6 +227,7 @@ html{
 p.portfolio-card-title{
   margin: 0;
   color: var(--Primary-Default);
+  white-space: nowrap;
 }
 .el-card__body img{
   width: 100%;

@@ -4,7 +4,7 @@
 
 
 <template>
-    <h2 class="text-center w-100 pt-5"><slot name="sectionTitle"></slot></h2>
+    <h2 class="text-center w-100 py-5"><slot name="sectionTitle"></slot></h2>
 </template>
 
 <style>
