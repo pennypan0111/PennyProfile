@@ -1,6 +1,6 @@
 /*通用規則*/
 :root {
-  --Primary-Default: #56757c;
+  --Primary-Default: #295d72;
   --Secondary-Default: #fac470;
   --white_p: #ffffff;
   --gray_p: #a1a1a1;
@@ -73,6 +73,17 @@ html{
 .navbar-blog:hover {
   color: var(--Secondary-Default);
 }
+.modal-mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 2;
+  transition: opacity .3s ease;
+  display: block;
+}
 @media screen and (min-width:992px){
   .navbar-collapse{
     border-top: 0px solid transparent;
@@ -80,8 +91,51 @@ html{
 }
 
 /* ---------- Profile ----------*/
-.Profile{
+/* .Profile{
   height: calc( 100vh - 60px );
+} */
+
+.Profile_imgBox img{
+  width: 100%;
+}
+.Profile_title{
+  position: relative;
+  padding-left: 20px;
+  font-size: 3rem;
+}
+.Profile_title:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--Primary-Default);
+  width: 8px;
+  height: 100%;
+}
+.Profile_introduce{
+  font-size: 1.2rem;
+}
+.readMore_btn{
+  background: var(--Primary-Default);
+  border-radius: 30px;
+  color: var(--white_p);
+  cursor: pointer;
+  text-decoration: none;
+}
+.readMore_btn:hover{
+  color: var(--Secondary-Default);
+  transition: 0.3s;
+  text-decoration: none;
+}
+@media screen and (min-width:768px){
+  .Profile_title{
+    font-size: 3.2rem;
+  }
+}
+@media screen and (min-width:992px){
+  .Profile_title{
+    font-size: 3.2rem;
+  }
 }
 
 /* ---------- About Me ----------*/

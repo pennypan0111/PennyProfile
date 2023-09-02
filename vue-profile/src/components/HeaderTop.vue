@@ -1,5 +1,29 @@
 <script>
-
+    export default{
+        data(){
+            return{
+                isNavOpen: false,
+                isMaskShow: false,
+                icon: 'fa-solid fa-bars',
+            }
+        },
+        computed:{
+            icon(){
+                return this.isNavOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+            },
+            modalState(){
+                return {
+                    'display': this.isMaskShow ? '' : 'none'
+                };
+            },
+        },
+        methods:{
+            toggleNav(){
+                this.isNavOpen = !this.isNavOpen;
+                this.isMaskShow = !this.isMaskShow;
+            },
+        }
+    }
 </script>
 
 
@@ -13,8 +37,8 @@
                 <a class="navbar-blog" href="https://github.com/pennypan0111" target="_blank"><font-awesome-icon icon="fa-brands fa-github"/></a>
             </div>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <font-awesome-icon icon="fa-solid fa-bars" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" @click="toggleNav">
+                <font-awesome-icon :icon="icon" />
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -40,6 +64,7 @@
         </div>
     </nav>
 
+    <div class="modal-mask" :style="modalState" @click="toggleNav"></div>
 
 </template>
 

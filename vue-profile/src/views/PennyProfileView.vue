@@ -6,47 +6,46 @@
         data() {
             return {
                 Portfolio_Category:[
-                    "Static Page with RWD",
                     "Static Page",
+                    "Static Pagewith RWD",
                     "Static Page with RWD",
                     "Figma Prototype",
                     "Figma Prototype",
                     "Figma Prototype",
                 ],
                 Portfolio_titles: [
-                    "Play One。陪玩",
                     "Space Inyaders。太空侵略者",
+                    "Play One。陪玩",
                     "To Do List。代辦清單",
                     "Juice。果汁",
                     "Lucky Roulette。幸運輪盤",
                     "Title 6"
                 ],
                 Portfolio_btns: [
-                    "https://pennypan0111.github.io/gm/",
                     "https://pennypan0111.github.io/pixel-game/pixelGame-easy.html",
+                    "https://pennypan0111.github.io/gm/",
                     "https://pennypan0111.github.io/vueToDoList/",
                     "https://www.figma.com/proto/DcpAyPWL1LlkZq48xhsiNa/Juice%E3%80%82%E6%9E%9C%E6%B1%81?page-id=0%3A1&type=design&node-id=1-3&viewport=755%2C414%2C0.19&t=AYNmdkgKJ5fMskN6-1&scaling=scale-down&starting-point-node-id=1%3A3&mode=design",
-                    "https://tw.yahoo.com/",
+                    "https://www.figma.com/proto/QHDyZ7v5DxX9WdNFfhvRyh/Lucky-Roulette%E3%80%82%E5%B9%B8%E9%81%8B%E8%BC%AA%E7%9B%A4?page-id=0%3A1&node-id=339-9&starting-point-node-id=339%3A9&scaling=scale-down&mode=design&t=FVX1CXAiIeUE2iBM-1",
                     "https://tw.yahoo.com/"
                 ],
                 Portfolio_introduce:[
-                    "大量運用CSS Animation動畫效果，為Switch遊戲的介紹頁面創造出生動的視覺效果，並有效地展示遊戲的特色和亮點",
                     "設計以復古像素風格為主的UI界面，結合JavaScript編寫遊戲互動，打造經典射擊遊戲體驗",
+                    "大量運用CSS Animation動畫效果，為Switch遊戲的介紹頁面創造出生動的視覺效果，並有效地展示遊戲的特色和亮點",
                     "利用Vue.js的Options API寫法，建立簡單的待辦事項清單，並可執行新增、刪除、更新等操作",
-                    "自行設計品牌主題及風格樣式，並透過運用Figma prototype模擬品牌官網頁面實際運行畫面",
-                    "",
+                    "自行發想打造獨特的品牌主題與風格，並透過原型設計的模擬，生動呈現品牌官網頁面的實際運行畫面",
+                    "透過精心構建的原型互動設計，逼真地模擬出完整的網頁抽獎流程，事先洞察可能情境，確保開發後能呈現順暢的抽獎體驗",
                     ""
                 ],
                 Portfolio_img:[
-                    "../../public/img/PlayOne.jpg",
                     "../../public/img/pixelGame.jpg",
+                    "../../public/img/PlayOne.jpg",
                     "../../public/img/ToDoList.jpg",
                     "../../public/img/juice.jpg",
                     "../../public/img/Lucky_Roulette.jpg",
                     "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png",
                 ],
                 currentIndex: 0,
-                translateX: 0,
                 itemsToShow: 0,
                 screenWidth: window.innerWidth,
                 modules: [Pagination, Navigation],
@@ -59,31 +58,6 @@
             window.removeEventListener('resize', this.updateScreenWidth);
         },
         methods:{
-            // slideLeft() {
-            //     if (this.currentIndex > 0) {
-            //         this.currentIndex--;
-            //         const container = document.querySelector('.container'); // 替换 '.container' 为你的容器选择器
-            //         const containerWidth = container.offsetWidth;
-            //         const itemWidth = 200; // 假设每个项目的宽度是200px
-            //         const visibleItems = Math.floor(containerWidth / itemWidth); // 计算可见项目数量
-            //         this.itemsToShow = visibleItems; // 将可见项目数量存储在组件的数据中
-            //         this.translateX = this.currentIndex * -itemWidth;
-            //     }
-            // },
-            // slideRight() {
-            //     if (this.currentIndex < this.items.length - this.itemsToShow) {
-            //         this.currentIndex++;
-            //         const container = document.querySelector('.container'); // 替换 '.container' 为你的容器选择器
-            //         const containerWidth = container.offsetWidth;
-            //         const itemWidth = 200; // 假设每个项目的宽度是200px
-            //         const visibleItems = Math.floor(containerWidth / itemWidth); // 计算可见项目数量
-            //         this.itemsToShow = visibleItems; // 将可见项目数量存储在组件的数据中
-            //         this.translateX = this.currentIndex * -itemWidth;
-            //     }
-            // },
-            handleWindowResize() {
-                this.translateX = 0; // 在窗口大小改变时将 translateX 归零
-            },
             updateScreenWidth() {
                 this.screenWidth = window.innerWidth;
             },
@@ -99,7 +73,22 @@
 <template>
 
     <section class="Profile" id="Profile">
-
+        <div class="container pt-lg-5">
+            <div class="row py-5 align-items-center">
+                <div class="col-lg-7 col-12 Profile_imgBox pt-5 px-0">
+                    <img src="../../public/img/penny.jpg">
+                </div>
+                <div class="col-lg-5 col-12 pt-5">
+                    <h1 class="title-primary font-weight-bold Profile_title">關於我<br/>想要應徵貴司職缺<br/>的這件事</h1>
+                    <p class="Profile_introduce my-4">Hi！我是Penny，是一名經歷了自我覺醒後，轉職成功的UI/UX設計師，並且同時能獨立完成前端切版作業及網頁互動效果。
+                        <br/><br/>如果目前為止有符合您尋才的基本需求，事不宜遲快點擊了解更多來認識我吧！
+                    </p>
+                    <div class="text-center text-lg-left">
+                        <a href="#About" class="readMore_btn px-3 py-2">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="AboutMe" id="About">
