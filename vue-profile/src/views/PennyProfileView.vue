@@ -12,6 +12,8 @@
                     "Figma Prototype",
                     "Figma Prototype",
                     "Figma Prototype",
+                    "XXX",
+                    "XXX",
                 ],
                 Portfolio_titles: [
                     "Space Inyaders。太空侵略者",
@@ -19,7 +21,9 @@
                     "To Do List。代辦清單",
                     "Juice。果汁",
                     "Lucky Roulette。幸運輪盤",
-                    "Title 6"
+                    "Wedding Story。幸福物語",
+                    "Title",
+                    "Title",
                 ],
                 Portfolio_btns: [
                     "https://pennypan0111.github.io/pixel-game/pixelGame-easy.html",
@@ -27,7 +31,7 @@
                     "https://pennypan0111.github.io/vueToDoList/",
                     "https://www.figma.com/proto/DcpAyPWL1LlkZq48xhsiNa/Juice%E3%80%82%E6%9E%9C%E6%B1%81?page-id=0%3A1&type=design&node-id=1-3&viewport=755%2C414%2C0.19&t=AYNmdkgKJ5fMskN6-1&scaling=scale-down&starting-point-node-id=1%3A3&mode=design",
                     "https://www.figma.com/proto/QHDyZ7v5DxX9WdNFfhvRyh/Lucky-Roulette%E3%80%82%E5%B9%B8%E9%81%8B%E8%BC%AA%E7%9B%A4?page-id=0%3A1&node-id=339-9&starting-point-node-id=339%3A9&scaling=scale-down&mode=design&t=FVX1CXAiIeUE2iBM-1",
-                    "https://tw.yahoo.com/"
+                    "https://www.figma.com/file/ggN15aKgkrnINy7sRJV0ed/shopping-App?type=design&node-id=0%3A1&mode=design&t=99LKG858SuYtfxlh-1"
                 ],
                 Portfolio_introduce:[
                     "設計以復古像素風格為主的UI界面，結合JavaScript編寫遊戲互動，打造經典射擊遊戲體驗",
@@ -35,7 +39,7 @@
                     "利用Vue.js的Options API寫法，建立簡單的待辦事項清單，並可執行新增、刪除、更新等操作",
                     "自行發想打造獨特的品牌主題與風格，並透過原型設計的模擬，生動呈現品牌官網頁面的實際運行畫面",
                     "透過精心構建的原型互動設計，逼真地模擬出完整的網頁抽獎流程，事先洞察可能情境，確保開發後能呈現順暢的抽獎體驗",
-                    ""
+                    "xx"
                 ],
                 Portfolio_img:[
                     "../../public/img/pixelGame.jpg",
@@ -43,12 +47,16 @@
                     "../../public/img/ToDoList.jpg",
                     "../../public/img/juice.jpg",
                     "../../public/img/Lucky_Roulette.jpg",
+                    "./../public/img/wedding_story.jpg",
+                    "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png",
                     "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png",
                 ],
                 currentIndex: 0,
                 itemsToShow: 0,
                 screenWidth: window.innerWidth,
                 modules: [Pagination, Navigation],
+                dialogVisible: false,
+                dialogVisible2: false,
             }
         },
         mounted() {
@@ -60,6 +68,12 @@
         methods:{
             updateScreenWidth() {
                 this.screenWidth = window.innerWidth;
+            },
+            dialog_show(){
+                this.dialogVisible = !this.dialogVisible;
+            },
+            dialog_show2(){
+                this.dialogVisible2 = !this.dialogVisible2;
             },
         },
         components:{
@@ -223,7 +237,7 @@
         <div class="container">
             <SectionTitle class="title-primary" #sectionTitle>PORTFOLIO</SectionTitle>
             <el-row class="pb-5">
-                <div class="col-lg-4 col-md-6 col-12 pt-3 " v-for="(o, index) in 6" :key="o" :span="8">
+                <div class="col-lg-4 col-md-6 col-12 pt-3 " v-for="(o, index) in 8" :key="o" :span="8">
                 <el-card :body-style="{ padding: '0px' }">
                     <img :src="Portfolio_img[index]" />
                     <div style="padding: 14px">
@@ -231,7 +245,10 @@
                         <p class="w-100 d-inline-block text-center title-primary font-weight-bold portfolio-card-title">{{ Portfolio_titles[index] }}</p>
                         <span class="w-100 d-inline-block text-justify">{{ Portfolio_introduce[index] }}</span>
                         <div class="bottom text-center">
-                            <a :href="Portfolio_btns[index]" target="_blank" class="btn mt-2 lookup_btn">查看</a>
+                            <a :href="Portfolio_btns[index]" target="_blank" class="btn mt-2 lookup_btn" 
+                                @click="index === 6 ? dialog_show() : (index === 7 ? dialog_show2() : null)">
+                                查看
+                            </a>
                         </div>
                     </div>
                 </el-card>
@@ -239,6 +256,15 @@
             </el-row>
         </div>
     </section>
+
+
+    <el-dialog v-model="dialogVisible" title="A1">
+
+    </el-dialog>
+
+    <el-dialog v-model="dialogVisible2" title="A2">
+
+</el-dialog>
 
 </template>
 
