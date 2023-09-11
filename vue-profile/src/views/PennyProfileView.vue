@@ -51,6 +51,13 @@
                     "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png",
                     "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png",
                 ],
+                dialog_photo_img:[
+                    { id:1, src:'../../public/img/mockup_DM.jpg' },
+                    { id:2, src:'../../public/img/mockup_FBAD.jpg' },
+                    { id:3, src:'../../public/img/mockup_Logo.jpg' },
+                    { id:4, src:'../../public/img/mockup_outdoor.jpg' },
+                    { id:5, src:'../../public/img/mockup_output.jpg' },
+                ],
                 currentIndex: 0,
                 itemsToShow: 0,
                 screenWidth: window.innerWidth,
@@ -80,6 +87,8 @@
             SectionTitle,
             Swiper,
             SwiperSlide,
+            Pagination,
+            Navigation
         }
     };
 </script>
@@ -258,8 +267,59 @@
     </section>
 
 
-    <el-dialog v-model="dialogVisible" title="A1">
+    <el-dialog v-model="dialogVisible" >
+        <!-- <el-carousel trigger="click" height="550px"> 
+            <el-carousel-item v-for="item in dialog_photo_img" :key="item.id">
+                <div class="dialog_photo_box">
+                    <img :src="item.src">
+                </div>
+                <div>hi</div>
+            </el-carousel-item>
+        </el-carousel> -->
 
+        <swiper
+            :slides-per-view="1"
+            :space-between="50"
+            :navigation="true"
+            :pagination="true"
+            :modules="modules"
+        >
+        <swiper-slide>
+            <div class="dialog_photo_box">
+                <img :src="dialog_photo_img[0].src">
+            </div>
+            <div class="text-center dialog_photo_text">111</div>
+        </swiper-slide>
+
+        <swiper-slide>
+            <div class="dialog_photo_box">
+                <img :src="dialog_photo_img[1].src">
+            </div>
+            <div class="text-center dialog_photo_text">222</div>
+        </swiper-slide>
+
+        <swiper-slide>
+            <div class="dialog_photo_box">
+                <img :src="dialog_photo_img[2].src">
+            </div>
+            <div class="text-center dialog_photo_text">333</div>
+        </swiper-slide>
+
+        <swiper-slide>
+            <div class="dialog_photo_box">
+                <img :src="dialog_photo_img[3].src">
+            </div>
+            <div class="text-center dialog_photo_text">444</div>
+        </swiper-slide>
+
+        <swiper-slide>
+            <div class="dialog_photo_box">
+                <img :src="dialog_photo_img[4].src">
+            </div>
+            <div class="text-center dialog_photo_text">555</div>
+        </swiper-slide>
+
+    </swiper>
     </el-dialog>
 
     <el-dialog v-model="dialogVisible2" title="A2">

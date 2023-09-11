@@ -296,3 +296,33 @@ p.portfolio-card-title{
   background: var(--Primary-Default);
   color: var(--Secondary-Default);
 }
+
+
+/* ---------- dialog ----------*/
+.el-dialog{
+  --el-dialog-width: 90%;
+}
+.dialog_photo_box{
+  width: 100%;
+  height: 100%;
+
+}
+.dialog_photo_box img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.dialog_photo_text{
+  font-size: 1.2rem;
+}
+.swiper-pagination-bullet-active{
+  /* background: var(--Primary-Default); */
+}
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom:var(--swiper-pagination-bottom, 35px);
+}
+@media screen and (min-width:992px){
+  .el-dialog{
+    --el-dialog-width: 55%;
+  }
+}
