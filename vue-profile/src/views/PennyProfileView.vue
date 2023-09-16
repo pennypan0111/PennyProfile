@@ -12,8 +12,8 @@
                     "Figma Prototype",
                     "Figma Prototype",
                     "Figma Prototype",
-                    "XXX",
-                    "XXX",
+                    "Photoshop、Illustrator",
+                    "Premiere",
                 ],
                 Portfolio_titles: [
                     "Space Inyaders。太空侵略者",
@@ -22,8 +22,8 @@
                     "Juice。果汁",
                     "Lucky Roulette。幸運輪盤",
                     "Wedding Story。幸福物語",
-                    "Title",
-                    "Title",
+                    "平面設計",
+                    "影片後製剪輯",
                 ],
                 Portfolio_btns: [
                     "https://pennypan0111.github.io/pixel-game/pixelGame-easy.html",
@@ -48,8 +48,8 @@
                     "../../public/img/juice.jpg",
                     "../../public/img/Lucky_Roulette.jpg",
                     "./../public/img/wedding_story.jpg",
-                    "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png",
-                    "https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png",
+                    "./../public/img/about_design.jpg",
+                    "./../public/img/about_video.jpg",
                 ],
                 dialog_photo_img:[
                     { id:1, src:'../../public/img/mockup_DM.jpg' },
@@ -62,8 +62,8 @@
                 itemsToShow: 0,
                 screenWidth: window.innerWidth,
                 modules: [Pagination, Navigation],
-                dialogVisible: false,
-                dialogVisible2: false,
+                dialogVisible_design: false,
+                dialogVisible_video: false,
             }
         },
         mounted() {
@@ -77,10 +77,10 @@
                 this.screenWidth = window.innerWidth;
             },
             dialog_show(){
-                this.dialogVisible = !this.dialogVisible;
+                this.dialogVisible_design = !this.dialogVisible_design;
             },
             dialog_show2(){
-                this.dialogVisible2 = !this.dialogVisible2;
+                this.dialogVisible_video = !this.dialogVisible_video;
             },
         },
         components:{
@@ -143,8 +143,8 @@
 
                 <el-timeline-item timestamp="2022/05 - 2022/10 (資歷5個月)" placement="top">
                     <el-card>
-                        <h4>資展國際｜互動式網站UI/UX設計師就業養成班</h4>
-                        <p>我還沒想內容</p>
+                        <h4>資展國際(原資策會)｜互動式網站UI/UX設計師就業養成班</h4>
+                        <p>考量目前社會趨勢逐漸傾向於網路發展，經多方搜索資料後，主動報名參加資展國際開設的「互動式網站UI/UX設計師就業養成班」，做為期約半年的網頁設計培訓，學習過程中有與團隊合作一同開發網頁的實際協作經歷，也有獨立完成個人專案的經驗與能力。<br/><br/>對於程式方面的相關領域也深感興趣，也曾嘗試自己動手寫出網頁小遊戲，這樣的挑戰使我更加堅定了成為網頁設計師或前端工程師的願望，我期待未來能夠不斷精進自己，並朝著這個充滿潛力的領域邁進。</p>
                     </el-card>
                 </el-timeline-item>
 
@@ -246,7 +246,7 @@
         <div class="container">
             <SectionTitle class="title-primary" #sectionTitle>PORTFOLIO</SectionTitle>
             <el-row class="pb-5">
-                <div class="col-lg-4 col-md-6 col-12 pt-3 " v-for="(o, index) in 8" :key="o" :span="8">
+                <div class="col-lg-4 col-md-6 col-12 pt-3 d-flex align-self-stretch" v-for="(o, index) in 8" :key="o" :span="8">
                 <el-card :body-style="{ padding: '0px' }">
                     <img :src="Portfolio_img[index]" />
                     <div style="padding: 14px">
@@ -267,15 +267,7 @@
     </section>
 
 
-    <el-dialog v-model="dialogVisible" >
-        <!-- <el-carousel trigger="click" height="550px"> 
-            <el-carousel-item v-for="item in dialog_photo_img" :key="item.id">
-                <div class="dialog_photo_box">
-                    <img :src="item.src">
-                </div>
-                <div>hi</div>
-            </el-carousel-item>
-        </el-carousel> -->
+    <el-dialog v-model="dialogVisible_design" >
 
         <swiper
             :slides-per-view="1"
@@ -283,48 +275,83 @@
             :navigation="true"
             :pagination="true"
             :modules="modules"
+            class="Portfolio_swiper_dots"
         >
-        <swiper-slide>
-            <div class="dialog_photo_box">
-                <img :src="dialog_photo_img[0].src">
-            </div>
-            <div class="text-center dialog_photo_text">111</div>
-        </swiper-slide>
+            <swiper-slide>
+                <div class="dialog_photo_box">
+                    <img :src="dialog_photo_img[0].src">
+                </div>
+                <div class="text-center dialog_photo_text title-primary font-weight-bold mt-2">《 活動宣傳DM設計 》</div>
+                <p class="text-justify dialog_photo_text">配合客戶需求擬定合適的主題風格與版面構圖，並將重要資訊及說明細項以層次分明的方式融入到畫面中，在講求完美的視覺呈現下同時達到宣傳DM傳遞資訊的目的</p>
+            </swiper-slide>
 
-        <swiper-slide>
-            <div class="dialog_photo_box">
-                <img :src="dialog_photo_img[1].src">
-            </div>
-            <div class="text-center dialog_photo_text">222</div>
-        </swiper-slide>
+            <swiper-slide>
+                <div class="dialog_photo_box">
+                    <img :src="dialog_photo_img[1].src">
+                </div>
+                <div class="text-center dialog_photo_text title-primary font-weight-bold mt-2">《 社群圖文設計 》</div>
+                <p class="text-justify dialog_photo_text ">考量在有限的版面空間，以及一般使用者對於廣告貼文瀏覽停留的駐足時間，設計能夠在短時間內有效地抓住使用者目光的視覺畫面，以提升廣告圖文的宣傳流量及廣告轉換效益</p>
+            </swiper-slide>
 
-        <swiper-slide>
-            <div class="dialog_photo_box">
-                <img :src="dialog_photo_img[2].src">
-            </div>
-            <div class="text-center dialog_photo_text">333</div>
-        </swiper-slide>
+            <swiper-slide>
+                <div class="dialog_photo_box">
+                    <img :src="dialog_photo_img[2].src">
+                </div>
+                <div class="text-center dialog_photo_text title-primary font-weight-bold mt-2">《 Logo設計 》</div>
+                <p class="text-justify dialog_photo_text ">「InDock 莫水文創」是一間行銷公司，將Ink(墨水)與Dock(碼頭)做結合，期許每個行銷點子都能透過一瓶瓶的墨水表達出去，而碼頭則是一個中轉站，存放著各式各樣的靈感與點子，等待需求後一一配送出去。設計上將英文開頭的i與D做結合，形成一艘帆船乘風破浪的意象，象徵每個行銷點子都能順風散播出去</p>
+            </swiper-slide>
 
-        <swiper-slide>
-            <div class="dialog_photo_box">
-                <img :src="dialog_photo_img[3].src">
-            </div>
-            <div class="text-center dialog_photo_text">444</div>
-        </swiper-slide>
+            <swiper-slide>
+                <div class="dialog_photo_box">
+                    <img :src="dialog_photo_img[3].src">
+                </div>
+                <div class="text-center dialog_photo_text title-primary font-weight-bold mt-2">《 大圖輸出設計 》</div>
+                <p class="text-center dialog_photo_text ">444</p>
+            </swiper-slide>
 
-        <swiper-slide>
-            <div class="dialog_photo_box">
-                <img :src="dialog_photo_img[4].src">
-            </div>
-            <div class="text-center dialog_photo_text">555</div>
-        </swiper-slide>
+            <swiper-slide>
+                <div class="dialog_photo_box">
+                    <img :src="dialog_photo_img[4].src">
+                </div>
+                <div class="text-center dialog_photo_text title-primary font-weight-bold mt-2">《 印刷物品設計 》</div>
+                <div class="text-center dialog_photo_text">555 </div>
+            </swiper-slide>
 
-    </swiper>
+        </swiper>
     </el-dialog>
 
-    <el-dialog v-model="dialogVisible2" title="A2">
+    <el-dialog v-model="dialogVisible_video">
+        <swiper
+            :slides-per-view="1"
+            :space-between="50"
+            :navigation="true"
+            :pagination="true"
+            :modules="modules"
+        >
+            <swiper-slide>
+                <div class="Portfolio_video_box text-center">
+                    <iframe src="https://www.youtube.com/embed/Oah4tH5ua58?si=6T1LzpDJ6cOEqKOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="text-center dialog_photo_text">【網紅youtuber】撒醬x日初Sachiko's FirstDay -金子半之助</div>
+            </swiper-slide>
 
-</el-dialog>
+            <swiper-slide>
+                <div class="Portfolio_video_box text-center">
+                    <iframe src="https://www.youtube.com/embed/qNApJvqaK04?si=w3tUdbbQJWf7TYFt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="text-center dialog_photo_text">【網紅youtuber】撒醬x日初Sachiko's FirstDay -日語教學</div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="Portfolio_video_box text-center">
+                    <iframe src="https://www.youtube.com/embed/orvS2KGBhQY?si=daXIxocBaFwYlXdt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="text-center dialog_photo_text">【公司接案】東稻家居-地理位置&產品介紹</div>
+            </swiper-slide>
+
+
+        </swiper>
+    </el-dialog>
 
 </template>
 

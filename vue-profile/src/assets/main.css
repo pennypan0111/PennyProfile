@@ -315,14 +315,39 @@ p.portfolio-card-title{
 .dialog_photo_text{
   font-size: 1.2rem;
 }
-.swiper-pagination-bullet-active{
-  /* background: var(--Primary-Default); */
+
+.Portfolio_video_box{
+  width: 100%;
+  height: 315px;
+  margin: auto;
 }
-.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-  bottom:var(--swiper-pagination-bottom, 35px);
+.Portfolio_video_box iframe{
+  width: 100%;
+  height: 100%;
+
+}
+.Portfolio_swiper_dots .swiper-pagination-bullet-active{
+  background: var(--Primary-Default);
+}
+.swiper-button-prev, .swiper-button-next{
+  color: var(--Primary-Default);
+}
+.Portfolio_swiper_dots .swiper-horizontal > .Portfolio_swiper_dots .swiper-pagination-bullets, .Portfolio_swiper_dots .swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom:var(--swiper-pagination-bottom, -3px);
+}
+@media screen and (min-width:768px){
+  .Portfolio_video_box{
+    width: 100%;
+    height: 315px;
+  }
 }
 @media screen and (min-width:992px){
   .el-dialog{
     --el-dialog-width: 55%;
+  }
+  .Portfolio_video_box{
+    width: 100%;
+    height: 600px;
+    margin: auto;
   }
 }
