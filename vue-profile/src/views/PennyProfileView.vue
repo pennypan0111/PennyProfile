@@ -9,9 +9,9 @@
                     "Static Page",
                     "Static Pagewith RWD",
                     "Static Page with RWD",
-                    "Figma Prototype",
-                    "Figma Prototype",
-                    "Figma Prototype",
+                    "Figma Prototype & Component",
+                    "Figma Prototype & Component",
+                    "Figma Prototype & Component",
                     "Photoshop、Illustrator",
                     "Premiere",
                 ],
@@ -37,9 +37,11 @@
                     "設計以復古像素風格為主的UI界面，結合JavaScript編寫遊戲互動，打造經典射擊遊戲體驗",
                     "大量運用CSS Animation動畫效果，為Switch遊戲的介紹頁面創造出生動的視覺效果，並有效地展示遊戲的特色和亮點",
                     "利用Vue.js的Options API寫法，建立簡單的待辦事項清單，並可執行新增、刪除、更新等操作",
-                    "自行發想打造獨特的品牌主題與風格，並透過原型設計的模擬，生動呈現品牌官網頁面的實際運行畫面",
-                    "透過精心構建的原型互動設計，逼真地模擬出完整的網頁抽獎流程，事先洞察可能情境，確保開發後能呈現順暢的抽獎體驗",
-                    "xx"
+                    "自行構思獨具特色的品牌主題和風格，並透過原型設計的模擬，生動地展示品牌官方網站的實際運作畫面",
+                    "透過精心構建的原型互動設計，逼真地模擬出完整的網頁抽獎流程，以達到事先洞察可能情境，確保開發後能呈現順暢的抽獎體驗",
+                    "善用Component功能，將重複性高的內容製作成Component，以確保整體內容的一致性，及提高設計效率",
+                    "使用Adobe Photoshop、Illustrator製作平面文宣、社群廣告圖、大型輸出物及相關印刷品輸出發包等作品",
+                    "自行接案，負責Youtuber、公司或企業相關的影片後期製作和剪輯等需求作品"
                 ],
                 Portfolio_img:[
                     "../../public/img/pixelGame.jpg",
@@ -252,7 +254,7 @@
                     <div style="padding: 14px">
                         <span class="text-center w-100 d-inline-block title-secondary">— {{ Portfolio_Category[index] }} —</span>
                         <p class="w-100 d-inline-block text-center title-primary font-weight-bold portfolio-card-title">{{ Portfolio_titles[index] }}</p>
-                        <span class="w-100 d-inline-block text-justify">{{ Portfolio_introduce[index] }}</span>
+                        <span class="w-100 d-inline-block text-justify portfolio_introduce">{{ Portfolio_introduce[index] }}</span>
                         <div class="bottom text-center">
                             <a :href="Portfolio_btns[index]" target="_blank" class="btn mt-2 lookup_btn" 
                                 @click="index === 6 ? dialog_show() : (index === 7 ? dialog_show2() : null)">
@@ -281,40 +283,40 @@
                 <div class="dialog_photo_box">
                     <img :src="dialog_photo_img[0].src">
                 </div>
-                <div class="text-center dialog_photo_text title-primary font-weight-bold mt-2">《 活動宣傳DM設計 》</div>
-                <p class="text-justify dialog_photo_text">配合客戶需求擬定合適的主題風格與版面構圖，並將重要資訊及說明細項以層次分明的方式融入到畫面中，在講求完美的視覺呈現下同時達到宣傳DM傳遞資訊的目的</p>
+                <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">《 活動宣傳DM設計 》</div>
+                <p class="text-justify dialog_content_text">配合客戶需求擬定合適的主題風格與版面構圖，並將重要資訊及說明細項以層次分明的方式融入到畫面中，在講求完美的視覺呈現下同時達到宣傳DM傳遞資訊的目的</p>
             </swiper-slide>
 
             <swiper-slide>
                 <div class="dialog_photo_box">
                     <img :src="dialog_photo_img[1].src">
                 </div>
-                <div class="text-center dialog_photo_text title-primary font-weight-bold mt-2">《 社群圖文設計 》</div>
-                <p class="text-justify dialog_photo_text ">考量在有限的版面空間，以及一般使用者對於廣告貼文瀏覽停留的駐足時間，設計能夠在短時間內有效地抓住使用者目光的視覺畫面，以提升廣告圖文的宣傳流量及廣告轉換效益</p>
+                <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">《 社群圖文設計 》</div>
+                <p class="text-justify dialog_content_text">考量在有限的版面空間，以及一般使用者對於廣告貼文瀏覽停留的駐足時間，設計能夠在短時間內有效地抓住使用者目光的視覺畫面，以提升廣告圖文的宣傳流量及廣告轉換效益</p>
             </swiper-slide>
 
             <swiper-slide>
                 <div class="dialog_photo_box">
                     <img :src="dialog_photo_img[2].src">
                 </div>
-                <div class="text-center dialog_photo_text title-primary font-weight-bold mt-2">《 Logo設計 》</div>
-                <p class="text-justify dialog_photo_text ">「InDock 莫水文創」是一間行銷公司，將Ink(墨水)與Dock(碼頭)做結合，期許每個行銷點子都能透過一瓶瓶的墨水表達出去，而碼頭則是一個中轉站，存放著各式各樣的靈感與點子，等待需求後一一配送出去。設計上將英文開頭的i與D做結合，形成一艘帆船乘風破浪的意象，象徵每個行銷點子都能順風散播出去</p>
+                <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">《 Logo設計 》</div>
+                <p class="text-justify dialog_content_text">「InDock 莫水文創」是一間行銷公司，將Ink(墨水)與Dock(碼頭)做結合，期許每個行銷點子都能透過一瓶瓶的墨水表達出去，而碼頭則是一個中轉站，存放著各式各樣的靈感與點子，等待需求後一一配送出去。設計上將英文開頭的i與D做結合，形成一艘帆船乘風破浪的意象，象徵每個行銷點子都能順風散播出去</p>
             </swiper-slide>
 
             <swiper-slide>
                 <div class="dialog_photo_box">
                     <img :src="dialog_photo_img[3].src">
                 </div>
-                <div class="text-center dialog_photo_text title-primary font-weight-bold mt-2">《 大圖輸出設計 》</div>
-                <p class="text-center dialog_photo_text ">444</p>
+                <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">《 大圖輸出設計 》</div>
+                <p class="text-justify dialog_content_text">擁有大型輸出設計經驗，能夠獨立完成從尺寸規格的確定、內容設計、與印刷廠商的洽談和價格協商，一直到成品驗收的全流程工作</p>
             </swiper-slide>
 
             <swiper-slide>
                 <div class="dialog_photo_box">
                     <img :src="dialog_photo_img[4].src">
                 </div>
-                <div class="text-center dialog_photo_text title-primary font-weight-bold mt-2">《 印刷物品設計 》</div>
-                <div class="text-center dialog_photo_text">555 </div>
+                <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">《 印刷物品設計 》</div>
+                <div class="text-justify dialog_content_text">了解印刷相關的知識，從產品設計、模擬打樣到商品驗收，擁有充分的能力與經驗應付各種印刷項目的需求</div>
             </swiper-slide>
 
         </swiper>
@@ -327,26 +329,22 @@
             :navigation="true"
             :pagination="true"
             :modules="modules"
+            class="Portfolio_swiper_dots"
         >
             <swiper-slide>
-                <div class="Portfolio_video_box text-center">
+                <div class="Portfolio_video_box">
                     <iframe src="https://www.youtube.com/embed/Oah4tH5ua58?si=6T1LzpDJ6cOEqKOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div class="text-center dialog_photo_text">【網紅youtuber】撒醬x日初Sachiko's FirstDay -金子半之助</div>
+                <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">【網紅youtuber】撒醬x日初Sachiko's FirstDay x 金子半之助</div>
+                <div class="text-justify dialog_content_text">台日混血Youtuber網紅與「日本第一職人天丼：金子半之助」合作的宣傳影片，在此影片中負責其特效字卡及音效搭配等後製作業 </div>
             </swiper-slide>
 
             <swiper-slide>
-                <div class="Portfolio_video_box text-center">
-                    <iframe src="https://www.youtube.com/embed/qNApJvqaK04?si=w3tUdbbQJWf7TYFt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="text-center dialog_photo_text">【網紅youtuber】撒醬x日初Sachiko's FirstDay -日語教學</div>
-            </swiper-slide>
-
-            <swiper-slide>
-                <div class="Portfolio_video_box text-center">
+                <div class="Portfolio_video_box">
                     <iframe src="https://www.youtube.com/embed/orvS2KGBhQY?si=daXIxocBaFwYlXdt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div class="text-center dialog_photo_text">【公司接案】東稻家居-地理位置&產品介紹</div>
+                <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">【公司企業】東稻家居-地理位置&產品介紹</div>
+                <div class="text-justify dialog_content_text">將收到的影片素材和腳本，獨立完成從無到有的剪輯工作，並為影片增添特效字卡、背景音樂、運鏡特效及字幕等後期製作工作，將影片更增添其完整性 </div>
             </swiper-slide>
 
 

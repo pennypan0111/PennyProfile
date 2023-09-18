@@ -18,6 +18,7 @@ html{
   color: var(--Primary-Default);
 }
 .title-secondary{
+  white-space: nowrap;
   color: var(--Secondary-Default);
 }
 .btn:focus{
@@ -296,6 +297,11 @@ p.portfolio-card-title{
   background: var(--Primary-Default);
   color: var(--Secondary-Default);
 }
+@media screen and (min-width:768px){
+  .portfolio_introduce{
+    min-height: 96px;
+  }
+}
 
 
 /* ---------- dialog ----------*/
@@ -312,7 +318,7 @@ p.portfolio-card-title{
   height: 100%;
   object-fit: contain;
 }
-.dialog_photo_text{
+.dialog_content_text{
   font-size: 1.2rem;
 }
 
@@ -324,7 +330,6 @@ p.portfolio-card-title{
 .Portfolio_video_box iframe{
   width: 100%;
   height: 100%;
-
 }
 .Portfolio_swiper_dots .swiper-pagination-bullet-active{
   background: var(--Primary-Default);
