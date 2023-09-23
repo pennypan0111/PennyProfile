@@ -1,5 +1,6 @@
 <script>
     import SectionTitle from '../components/SectionTitle.vue'
+    import Footer from '../components/Footer.vue'
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import { Pagination, Navigation } from 'swiper/modules';
     export default {
@@ -87,6 +88,7 @@
         },
         components:{
             SectionTitle,
+            Footer,
             Swiper,
             SwiperSlide,
             Pagination,
@@ -105,7 +107,7 @@
                 </div>
                 <div class="col-lg-5 col-12 pt-5">
                     <h1 class="title-primary font-weight-bold Profile_title">關於我<br/>想要應徵貴司職缺<br/>的這件事</h1>
-                    <p class="Profile_introduce my-4">Hi！我是Penny，是一名經歷了自我覺醒後，轉職成功的UI/UX設計師，並且同時能獨立完成前端切版作業及網頁互動效果。
+                    <p class="Profile_introduce my-4">Hi！我是Penny，是一名經歷了自我覺醒後，轉職成功的UI/UX設計師，並且了解前端框架同時能獨立運用前端框架完成切版作業及網頁互動效果。
                         <br/><br/>如果目前為止有符合您尋才的基本需求，事不宜遲快點擊了解更多來認識我吧！
                     </p>
                     <div class="text-center text-lg-left">
@@ -118,56 +120,54 @@
 
     <section class="AboutMe" id="About">
         <div class="container pb-5">
-            <SectionTitle class="title-secondary" #sectionTitle>ABOUT ME</SectionTitle>
+            <SectionTitle class="title-secondary font-weight-bold" #sectionTitle>About Me</SectionTitle>
             <div class="aboutMe-content">
-                畢業於靜宜大學-企業管理學系，曾任職行銷企劃，後因自我興趣使然，轉職為全職設計，主要以製作平面文宣(DM、海報)、印刷品發包、協助商品拍攝以及後續商品修圖為主。同時順應潮流的趨勢，嘗試自學影片的剪輯及後製，也曾有幸接到Youtuber影片剪輯後製的經驗。
+
+                靠著自學設計軟體，接觸到了平面設計的相關工作，期間涉略的領域包含：平面設計、印刷發包、社群圖文等。在設計領域了解的越深入後，我理解到「設計」不僅僅是視覺上的呈現，還包括了如何為使用者提供優秀的體驗，站在消費者/使用者的立場去全盤思考，而這也是引領我進入「UI/UX設計」領域的契機。
                 <br/>
                 <br/>
-                目前正於資展國際所開設的，互動式網站UI/UX設計師就業養成班，做為期約半年的培訓，學習過程中，對程式方面的相關領域很有興趣，期望未來能朝網頁設計師、前端工程師的道路前進。
-                <br/>
-                <br/>
-                在這種不可避免的衝突下，我們必須解決這個問題。現在，正視UIUX 自我介紹的問題，是非常非常重要的。因為，若能夠欣賞到UIUX 自我介紹的美，相信我們一定會對UIUX 自我介紹改觀。
+                在踏入UI/UX設計領域初期，報名參加了資展國際所開設的，互動式網站UI/UX設計師就業養成班，做為期約半年的培訓，期間學習到關於用戶研究、資訊架構、互動設計等相關領域的知識，也進一步拓展了自己的技能，從0到1自學前端框架及互動呈現並順利的在工作中實際運用。
             </div>
         </div>
     </section>
 
     <section class="Experience" id="Experience">
         <div class="container">
-            <SectionTitle class="title-primary" #sectionTitle>EXPERIENCE</SectionTitle>
+            <SectionTitle class="title-primary font-weight-bold" #sectionTitle>Experience</SectionTitle>
             <el-timeline class="pb-5">
 
                 <el-timeline-item timestamp="2022/11 - 至今" placement="top">
                     <el-card>
-                        <h4>動力安全資訊股分有限公司｜前端工程師</h4>
-                        <p>我還沒想內容</p>
+                        <h4>動力安全資訊股分有限公司｜UIUX設計師、前端工程師</h4>
+                        <p class="mb-0">負責內部系統介面視覺優化，同時將其中使用的元件制定成規範並建立元件庫，以便加速其他專案的開發和模板化。此外，期間靠著網路資源從0到1自學Vue.js前端框架、第三方套件運用、API串接以及基礎的.Net Core Web API 建置，將公司內部原有的專案透過新學的技術進行改寫。</p>
                     </el-card>
                 </el-timeline-item>
 
                 <el-timeline-item timestamp="2022/05 - 2022/10 (資歷5個月)" placement="top">
                     <el-card>
                         <h4>資展國際(原資策會)｜互動式網站UI/UX設計師就業養成班</h4>
-                        <p>考量目前社會趨勢逐漸傾向於網路發展，經多方搜索資料後，主動報名參加資展國際開設的「互動式網站UI/UX設計師就業養成班」，做為期約半年的網頁設計培訓，學習過程中有與團隊合作一同開發網頁的實際協作經歷，也有獨立完成個人專案的經驗與能力。<br/><br/>對於程式方面的相關領域也深感興趣，也曾嘗試自己動手寫出網頁小遊戲，這樣的挑戰使我更加堅定了成為網頁設計師或前端工程師的願望，我期待未來能夠不斷精進自己，並朝著這個充滿潛力的領域邁進。</p>
+                        <p class="mb-0">考量目前社會趨勢逐漸傾向於網路發展，經多方搜索資料後，主動報名參加資展國際開設的「互動式網站UI/UX設計師就業養成班」，做為期約半年的網頁設計培訓，學習過程中有與團隊合作一同開發網頁的實際協作經歷，也有獨立完成個人專案的經驗與能力。</p>
                     </el-card>
                 </el-timeline-item>
 
                 <el-timeline-item timestamp="2018/11 - 2022/05 (資歷3年6個月)" placement="top">
                     <el-card>
                         <h4>富信大飯店股份有限公司｜設計專員</h4>
-                        <p>在擔任設計專員期間，主要負責製作活動專案平面文宣(海報、DM...等)，印刷物輸出發包，以及針對季節新品進行商品拍攝。並曾於同期間兼任行銷職務，將以往所學相關行銷知識與設計技能結合應用。</p>
+                        <p class="mb-0">在擔任設計專員期間，主要負責製作活動專案平面文宣(海報、DM...等)，印刷物輸出發包，以及針對季節新品進行商品拍攝。並曾於同期間兼任行銷職務，將以往所學相關行銷知識與設計技能結合應用。</p>
                     </el-card>
                 </el-timeline-item>
 
                 <el-timeline-item timestamp="2017/06 - 2018/10 (資歷1年4個月)" placement="top">
                     <el-card>
                         <h4>金田餐飲股份有限公司｜行銷專員</h4>
-                        <p>主要負責代理國外餐飲品牌管理，並擔任門市與進駐百貨之接洽窗口，從中學習到了專案時程的規劃，以及對外應變的溝通能力。</p>
+                        <p class="mb-0">主要負責代理國外餐飲品牌管理，並擔任門市與進駐百貨之接洽窗口，從中學習到了專案時程的規劃，以及對外應變的溝通能力。</p>
                     </el-card>
                 </el-timeline-item>
 
                 <el-timeline-item timestamp="2016/07 - 2017/06 (資歷11個月)" placement="top">
                     <el-card>
                         <h4>喜鴻旅行社｜行銷專員</h4>
-                        <p>剛進職場的第一份工作，主要發想規劃官網網頁活動企劃，並與設計部門協同製作出活動網頁，同時負責社群軟體經營、廣告投放，以及內部專案新人教育訓練講師。</p>
+                        <p class="mb-0">剛進職場的第一份工作，主要發想規劃官網網頁活動企劃，並與設計部門協同製作出活動網頁，同時負責社群軟體經營、廣告投放，以及內部專案新人教育訓練講師。</p>
                     </el-card>
                 </el-timeline-item>
 
@@ -177,7 +177,7 @@
 
     <section class="Skills" id="Skills">
         <div class="container">
-            <SectionTitle class="title-secondary" #sectionTitle>SKILLS</SectionTitle>
+            <SectionTitle class="title-secondary font-weight-bold" #sectionTitle>Skills</SectionTitle>
             <swiper
                 :slidesPerView="screenWidth >= 1200 ? 5 : (screenWidth >= 992 ? 4 : (screenWidth >= 768 ? 3 : 2))"
                 :spaceBetween="30"
@@ -246,7 +246,7 @@
 
     <section class="Portfolio" id="Portfolio">
         <div class="container">
-            <SectionTitle class="title-primary" #sectionTitle>PORTFOLIO</SectionTitle>
+            <SectionTitle class="title-primary font-weight-bold" #sectionTitle>Portfolio</SectionTitle>
             <el-row class="pb-5">
                 <div class="col-lg-4 col-md-6 col-12 pt-3 d-flex align-self-stretch" v-for="(o, index) in 8" :key="o" :span="8">
                 <el-card :body-style="{ padding: '0px' }">
@@ -268,7 +268,6 @@
         </div>
     </section>
 
-
     <el-dialog v-model="dialogVisible_design" >
 
         <swiper
@@ -284,7 +283,7 @@
                     <img :src="dialog_photo_img[0].src">
                 </div>
                 <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">《 活動宣傳DM設計 》</div>
-                <p class="text-justify dialog_content_text">配合客戶需求擬定合適的主題風格與版面構圖，並將重要資訊及說明細項以層次分明的方式融入到畫面中，在講求完美的視覺呈現下同時達到宣傳DM傳遞資訊的目的</p>
+                <p class="text-justify dialog_content_text">配合客戶需求擬定合適的主題風格與版面構圖，並將重要資訊及說明細項以層次分明的方式融入到畫面中，在講求完美的視覺呈現下同時達到宣傳DM傳遞資訊的目的。</p>
             </swiper-slide>
 
             <swiper-slide>
@@ -292,7 +291,7 @@
                     <img :src="dialog_photo_img[1].src">
                 </div>
                 <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">《 社群圖文設計 》</div>
-                <p class="text-justify dialog_content_text">考量在有限的版面空間，以及一般使用者對於廣告貼文瀏覽停留的駐足時間，設計能夠在短時間內有效地抓住使用者目光的視覺畫面，以提升廣告圖文的宣傳流量及廣告轉換效益</p>
+                <p class="text-justify dialog_content_text">考量在有限的版面空間，以及一般使用者對於廣告貼文瀏覽停留的駐足時間，設計能夠在短時間內有效地抓住使用者目光的視覺畫面，以提升廣告圖文的宣傳流量及廣告轉換效益。</p>
             </swiper-slide>
 
             <swiper-slide>
@@ -300,7 +299,7 @@
                     <img :src="dialog_photo_img[2].src">
                 </div>
                 <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">《 Logo設計 》</div>
-                <p class="text-justify dialog_content_text">「InDock 莫水文創」是一間行銷公司，將Ink(墨水)與Dock(碼頭)做結合，期許每個行銷點子都能透過一瓶瓶的墨水表達出去，而碼頭則是一個中轉站，存放著各式各樣的靈感與點子，等待需求後一一配送出去。設計上將英文開頭的i與D做結合，形成一艘帆船乘風破浪的意象，象徵每個行銷點子都能順風散播出去</p>
+                <p class="text-justify dialog_content_text">「InDock 莫水文創」是一間行銷公司，將Ink(墨水)與Dock(碼頭)做結合，期許每個行銷點子都能透過一瓶瓶的墨水表達出去，而碼頭則是一個中轉站，存放著各式各樣的靈感與點子，等待需求後一一配送出去。設計上將英文開頭的i與D做結合，形成一艘帆船乘風破浪的意象，象徵每個行銷點子都能順風散播出去。</p>
             </swiper-slide>
 
             <swiper-slide>
@@ -308,7 +307,7 @@
                     <img :src="dialog_photo_img[3].src">
                 </div>
                 <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">《 大圖輸出設計 》</div>
-                <p class="text-justify dialog_content_text">擁有大型輸出設計經驗，能夠獨立完成從尺寸規格的確定、內容設計、與印刷廠商的洽談和價格協商，一直到成品驗收的全流程工作</p>
+                <p class="text-justify dialog_content_text">擁有大型輸出設計經驗，能夠獨立完成從尺寸規格的確定、內容設計、與印刷廠商的洽談和價格協商，一直到成品驗收的全流程工作。</p>
             </swiper-slide>
 
             <swiper-slide>
@@ -316,7 +315,7 @@
                     <img :src="dialog_photo_img[4].src">
                 </div>
                 <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">《 印刷物品設計 》</div>
-                <div class="text-justify dialog_content_text">了解印刷相關的知識，從產品設計、模擬打樣到商品驗收，擁有充分的能力與經驗應付各種印刷項目的需求</div>
+                <div class="text-justify dialog_content_text">了解印刷相關的知識，從產品設計、模擬打樣到商品驗收，擁有充分的能力與經驗應付各種印刷項目的需求。</div>
             </swiper-slide>
 
         </swiper>
@@ -336,7 +335,7 @@
                     <iframe src="https://www.youtube.com/embed/Oah4tH5ua58?si=6T1LzpDJ6cOEqKOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">【網紅youtuber】撒醬x日初Sachiko's FirstDay x 金子半之助</div>
-                <div class="text-justify dialog_content_text">台日混血Youtuber網紅與「日本第一職人天丼：金子半之助」合作的宣傳影片，在此影片中負責其特效字卡及音效搭配等後製作業 </div>
+                <p class="text-justify dialog_content_text">台日混血Youtuber網紅與「日本第一職人天丼：金子半之助」合作的宣傳影片，在此影片中負責其特效字卡及音效搭配等後製作業。</p>
             </swiper-slide>
 
             <swiper-slide>
@@ -344,12 +343,17 @@
                     <iframe src="https://www.youtube.com/embed/orvS2KGBhQY?si=daXIxocBaFwYlXdt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="text-center dialog_content_text title-primary font-weight-bold mt-2">【公司企業】東稻家居-地理位置&產品介紹</div>
-                <div class="text-justify dialog_content_text">將收到的影片素材和腳本，獨立完成從無到有的剪輯工作，並為影片增添特效字卡、背景音樂、運鏡特效及字幕等後期製作工作，將影片更增添其完整性 </div>
+                <p class="text-justify dialog_content_text">將收到的影片素材和腳本，獨立完成從無到有的剪輯工作，並為影片增添特效字卡、背景音樂、運鏡特效及字幕等後期製作工作，將影片更增添其完整性。</p>
             </swiper-slide>
-
 
         </swiper>
     </el-dialog>
+
+    <div class="backToTop">
+        <a href="#Profile"><font-awesome-icon :icon="['fas', 'circle-up']" /></a>
+    </div>
+
+    <Footer></Footer>
 
 </template>
 

@@ -5,7 +5,7 @@ import VueSweetalert2 from 'vue-sweetalert2';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faMedium , faGithub  } from '@fortawesome/free-brands-svg-icons'
-import { faBars , faXmark , faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faBars , faXmark , faAngleRight, faAngleLeft, faCircleUp } from '@fortawesome/free-solid-svg-icons'
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'element-plus/dist/index.css'
@@ -20,7 +20,7 @@ import './assets/main.css'
 import App from './App.vue'
 import router from './router'
 
-library.add(faMedium , faGithub , faBars, faXmark , faAngleRight , faAngleLeft )
+library.add(faMedium , faGithub , faBars, faXmark , faAngleRight , faAngleLeft , faCircleUp )
 
 const app = createApp(App)
 

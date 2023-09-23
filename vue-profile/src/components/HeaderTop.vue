@@ -44,9 +44,6 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav text-center">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#Profile">Profile</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#About">About Me</a>
                     </li>
                     <li class="nav-item">
