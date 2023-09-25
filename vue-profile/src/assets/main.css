@@ -358,31 +358,19 @@ p.portfolio-card-title{
 }
 
 
-/* ---------- backToTop ----------*/
-.backToTop a{
-  font-size: 3rem;
-  color: var(--Secondary-Default);
-  position: fixed;
-  right: 10px;
-  bottom: 60px;
-  cursor: pointer;
-  width: 48px;
-  height: 48px;
-  border-radius: 48px;
-  display: flex;
-  background: var(--white_p);
-  z-index: 10;
-}
-@media screen and (min-width:992px){
-  .backToTop a{
-    right: 30px;
-    bottom: 60px;
-  }
-}
-
 /* ---------- Footer ----------*/
 .Footer{
   padding: 10px 0;
   background: var(--Primary-Default);
   color: var(--white_p);
+}
+
+
+/* ---------- backToTop ----------*/
+.el-backtop{
+  --el-backtop-bg-color: var(--Secondary-Default);
+  --el-backtop-text-color: var(--white_p);
+}
+.el-backtop:hover {
+  background-color: var(--Secondary-Default);
 }

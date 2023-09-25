@@ -349,9 +349,7 @@
         </swiper>
     </el-dialog>
 
-    <div class="backToTop">
-        <a href="#Profile"><font-awesome-icon :icon="['fas', 'circle-up']" /></a>
-    </div>
+    <el-backtop :right="40" :bottom="60" />
 
     <Footer></Footer>
 
