@@ -8,7 +8,8 @@
             return {
                 Portfolio_Category:[
                     "Static Page",
-                    "Static Pagewith RWD",
+                    "Static Page with RWD",
+                    "Static Page with RWD",
                     "Static Page with RWD",
                     "Figma Prototype & Component",
                     "Figma Prototype & Component",
@@ -19,6 +20,7 @@
                 Portfolio_titles: [
                     "Space Inyaders。太空侵略者",
                     "Play One。陪玩",
+                    "Exchange Rate。幣值轉換",
                     "To Do List。代辦清單",
                     "Juice。果汁",
                     "Lucky Roulette。幸運輪盤",
@@ -29,6 +31,7 @@
                 Portfolio_btns: [
                     "https://pennypan0111.github.io/pixel-game/pixelGame-easy.html",
                     "https://pennypan0111.github.io/gm/",
+                    "https://pennypan0111.github.io/vueExchangeRate/",
                     "https://pennypan0111.github.io/vueToDoList/",
                     "https://www.figma.com/proto/DcpAyPWL1LlkZq48xhsiNa/Juice%E3%80%82%E6%9E%9C%E6%B1%81?page-id=0%3A1&type=design&node-id=1-3&viewport=755%2C414%2C0.19&t=AYNmdkgKJ5fMskN6-1&scaling=scale-down&starting-point-node-id=1%3A3&mode=design",
                     "https://www.figma.com/proto/QHDyZ7v5DxX9WdNFfhvRyh/Lucky-Roulette%E3%80%82%E5%B9%B8%E9%81%8B%E8%BC%AA%E7%9B%A4?page-id=0%3A1&node-id=339-9&starting-point-node-id=339%3A9&scaling=scale-down&mode=design&t=FVX1CXAiIeUE2iBM-1",
@@ -37,6 +40,7 @@
                 Portfolio_introduce:[
                     "設計以復古像素風格為主的UI界面，結合JavaScript編寫遊戲互動，打造經典射擊遊戲體驗",
                     "大量運用CSS Animation動畫效果，為Switch遊戲的介紹頁面創造出生動的視覺效果，並有效地展示遊戲的特色和亮點",
+                    "使用vue axios套件，串接即時匯率的Open API，設定自行輸入台幣金額，可即時轉換對應的日圓及美金",
                     "利用Vue.js的Options API寫法，建立簡單的待辦事項清單，並可執行新增、刪除、更新等操作",
                     "自行構思獨具特色的品牌主題和風格，並透過原型設計的模擬，生動地展示品牌官方網站的實際運作畫面",
                     "透過精心構建的原型互動設計，逼真地模擬出完整的網頁抽獎流程，以達到事先洞察可能情境，確保開發後能呈現順暢的抽獎體驗",
@@ -47,6 +51,7 @@
                 Portfolio_img:[
                     "../../public/img/pixelGame.jpg",
                     "../../public/img/PlayOne.jpg",
+                    "../../public/img/ExchangeRate.jpg",
                     "../../public/img/ToDoList.jpg",
                     "../../public/img/juice.jpg",
                     "../../public/img/Lucky_Roulette.jpg",
@@ -248,7 +253,7 @@
         <div class="container">
             <SectionTitle class="title-primary font-weight-bold" #sectionTitle>Portfolio</SectionTitle>
             <el-row class="pb-5">
-                <div class="col-lg-4 col-md-6 col-12 pt-3 d-flex align-self-stretch" v-for="(o, index) in 8" :key="o" :span="8">
+                <div class="col-lg-4 col-md-6 col-12 pt-3 d-flex align-self-stretch" v-for="(o, index) in 9" :key="o" :span="9">
                 <el-card :body-style="{ padding: '0px' }">
                     <img :src="Portfolio_img[index]" />
                     <div style="padding: 14px">
@@ -257,7 +262,7 @@
                         <span class="w-100 d-inline-block text-justify portfolio_introduce">{{ Portfolio_introduce[index] }}</span>
                         <div class="bottom text-center">
                             <a :href="Portfolio_btns[index]" target="_blank" class="btn mt-2 lookup_btn" 
-                                @click="index === 6 ? dialog_show() : (index === 7 ? dialog_show2() : null)">
+                                @click="index === 7 ? dialog_show() : (index === 8 ? dialog_show2() : null)">
                                 查看
                             </a>
                         </div>
